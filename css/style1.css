@@ -1,0 +1,23 @@
+﻿body{
+	color:red;
+}
+
+p{
+	font-family: "arial",sans-serif;
+	color:yellow;
+}
+.special{
+	color:black;
+}
+/* this will only affect h1 who have a class as special */
+h1.special{
+	color:pink;
+}
+#ul{
+	color:silver;
+	border: black solid;
+}
+/* this will only affect li under element whose id is ul */
+#ul li{ 
+	font-weight: bold;
+}

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+
+	function myFunction(){
+	    document.getElementById("demo").innerHTML = Date();
+	}
+
+    function multiply(num1,num2){
+        var total=num1*num2;
+        alert(total);
+    }
+
+    function add(num1,num2){
+        var total=num1+num2
+        return total //function can return a value!!
+    }
+
+    //wrong way
+    function square(num){
+        total=num*num; //will be treat as global variable, use var to explicitly declare it
+        return total;
+    }
+
+    //right way to do it
+    function square2(num){
+        var total=num*num;
+        return total;
+    }
+
+    var beatles=new Array(); //we can also use new keyword to create array
+    var num=7.8182;
+    var num=Math.round(num);
+    alert(num);
+
+    var current_date=new Date();
+    var today=current_date.getDay();
+    alert(today);
+
+    //	var total=50; //global variable
+    //	var number=square(20);
+    //	alert(total);
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <button onclick="multiply(1,8)">kkkk</button>
+    <p id="demo">hello</p>
+</body>
+</html>
