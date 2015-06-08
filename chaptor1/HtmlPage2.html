@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../css/style1.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>What to buy</h1>
+    <p title="a gental reminder">Don't forget to buy this staff</p><!--element p is called element node, "Don't forget to buy this staff
+                                             is called text node", "title=a gental reminder is called attribute node"-->
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li>Cheese</li>
+        <li>Milk</li>
+    </ul>
+    <script>
+        var shopping = document.getElementById("purchases");
+        alert(typeof document.getElementById("purchases"));
+        var TotalItems = document.getElementsByTagName("*").length;//return the total number of elements in this document
+        var items = document.getElementsByTagName("li");
+        var shoppingItems = shopping.getElementsByTagName("*")//return the total number of sub-elements of shopping element
+        alert(items.length);
+        for (var i = 0; i < items.length; i++) {
+            alert(typeof items[i]);
+        }
+
+        var params = document.getElementsByTagName("p");
+        for (var i = 0; i < params.length; i++) {
+            var title_text = params[i].getAttribute("title");
+            alert(params[i].getAttribute("title"));//getAttribute method can only be used for a specific element, not document object
+            if (title_text != null) {
+                param[i].setAttribute("title", "a band new title");//setAttribute method is no longer valid!!!
+                alert(params[i].getAttribute("title"));
+            }
+        }
+    </script>
+</body>
+</html>
