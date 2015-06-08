@@ -2,7 +2,16 @@ function showPic(whichpic) {
     var source = whichpic.getAttribute("href");
     var placeholder = document.getElementById("placeholder");
     placeholder.setAttribute("src", source);
+    var text = whichpic.getAttribute("title");
+    var description = document.getElementById("description");
+    description.firstChild.nodeValue = text;
+    alert(description.nodeValue);//wrong way, will return null
+    alert(description.childNodes[0].nodeValue);//rihgt way, description.childNodes[0] will return p element
+    alert(description.firstChild);//return first child, and last child
+    alert(description.lastChild);
 }
+window.onload = countBodyChildren;// window.onload call the following method when the page is loaded
+
 	/*function showPic(whichpic){
 		if(!document.getElementById("placeholder")) return false;
 		var source=whichpic.getAttribute("href");
