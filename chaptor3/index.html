@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="http://www.google.com">open google</a>
+<!--use pseudo-protocol to call javascript method-->
+<a href="javascript:popUp('http://www.baidu.com');">open baidu</a>
+<a href="#" onclick="popUp('http://www.hao123.com'); return false;">open hao123</a>
+<!-- gracefull degradation , good for search engine--> 
+<a href="http://www.hao123.com" onclick="popUp('http://www.hao123.com'); return false;">open hao123 gracefully</a>
+<a href="http://www.hao123.com" onclick="popUp(this.getAttribute('href')); return false;">open hao123 gracefully</a>
+<a href="http://www.hao123.com" onclick="popUp(this.href); return false;">open hao123 gracefully</a>
+<br />
+<!-- a new way to impelemt this! -->
+<a href="http://www.google.com" class="popup">open google</a>
+<a href="http://www.baidu.com" class="popup">open baidu</a>
+<a href="http://www.hao123.com" class="popup">open hao123</a>
+<!-- in order to increase load time -->
+<script src="js/openWindow.min.js"></script>
+</body>
+</html>
