@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<!-- rel attribute specify the relationship between the current file and the linked file -->
+    <link href="../css/layout.css" rel="stylesheet" />
+    <script src="../script/showPic.js"></script>
+<meta charset="UTF-8">
+<title>Images gallery</title>
+</head>
+<body>
+	<h1>Snapshots</h1>
+	<ul id="imagegallery">
+		<li>
+			<!--<a href="../images/gg2.jpg" title="cows">
+				<img class="small" alt="cows" src="../images/gg2.jpg">
+			</a>-->
+            <a href="../images/gg2.jpg" onclick="showPic(this); return false;" title="cows">
+                Cows
+            </a>
+		</li>
+	
+		<li>
+			<!--<a href="../images/gg3.jpg" title="castle">
+				<img class="small" alt="castle" src="../images/gg3.jpg">
+			</a>-->
+            <a href="../images/gg3.jpg" onclick="showPic(this); return false;" title="castle">
+                Castle
+            </a>
+		</li>
+	
+		<li>
+			<!--<a href="../images/gg4.jpg" title="formula">
+				<img class="small" alt="formula" src="../images/gg4.jpg">
+			</a>-->
+            <a href="../images/gg4.jpg" onclick="showPic(this); return false;" title="formula">
+                Formula
+            </a>
+		</li>
+	
+		<li>
+			<!--<a href="../images/gg5.jpg" title="avoca">
+				<img class="small" alt="avoca" src="../images/gg5.jpg">
+			</a>-->
+            <a href="../images/gg5.jpg" onclick="showPic(this); return false;" title="avoca">
+                Avoca
+            </a>
+		</li>
+	</ul>
+    <img class="placeholder" id="placeholder" alt="my image gallery" src="../images/placeholder.jpg" />
+	<p id="description">choose an image</p>
+	<a href="http://www.google.com" onclick="return false;">click me</a>	
+</body>
+</html>
