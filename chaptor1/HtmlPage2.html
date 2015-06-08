@@ -29,7 +29,7 @@
             var title_text = params[i].getAttribute("title");
             alert(params[i].getAttribute("title"));//getAttribute method can only be used for a specific element, not document object
             if (title_text != null) {
-                param[i].setAttribute("title", "a band new title");//setAttribute method is no longer valid!!!
+                params[i].setAttribute("title", "a band new title");//setAttribute method is used to change attribute value
                 alert(params[i].getAttribute("title"));
             }
         }
